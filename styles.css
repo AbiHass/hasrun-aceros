@@ -279,12 +279,6 @@ main {
     border-radius: 5px;
     margin-top: 15px;
 }
-.button_contacto:hover{
-    display: inline-block;
-    animation: pulse;
-    animation-duration: 2s;
-   
-}
 
 #presupuesto {
     background-color: var(--orange);
