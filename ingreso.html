@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador Diseño Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <a href="#inicio"><img src="img\logo.png" alt="logo" class="logo_img"></a>
+        <nav class="navbar">
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu"> <i class="fas fa-bars"></i> </label>
+            <ul class="navbar-list">
+                <li><a href="#productos" class="animate__animated 
+                    flipInX">Productos</a></li>
+                <li><a href="#" class="nav_button">Quienes Somos</a></li>
+                <li><a href="#presupuestos" class="nav_button">Presupuestos</a></li>
+                <li><a href="#" class="nav_button">Diseños</a></li>
+                <li><a href="ingreso.html" class="nav_button">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="ingreso">
+        <h1 class="ingreso_title">¿Necesitas contactarnos?</h1>
+        <div class="contacto_container">
+            <h1>Conectate a tu cuenta</h1>
+            <label for="mail"> <p>Email</p>
+                <input type="email" placeholder="Dirección de Correo Electrónico">
+            </label>
+            <label for="contraseña" placeholder="Contraseña"><p>Contraseña</p>
+                <input type="password" placeholder="Contraseña">
+            </label>
+        </div>
+        <div class="contacto_opciones">
+            <label for="Recordar" class="checkbox">Recordar
+                <input type="checkbox">
+            </label>
+            <a href="#">Olvidé mi Contraseña</a>
+        </div>
+        <div class="iniciar_sesion">
+            <input type="submit" value="Iniciar Sesión">
+        </div>
+        <div class="registro_container">
+            <h1>¿No tenés una cuenta?</h1>
+            <a href="registro.html">¡Registrate!</a>
+        </div>
+        <div class="iniciar_redes">
+            <a href="https://www.facebook.com" class="iniciar_fb"> <img src="img\fb.png" alt="fb">Continuar con
+                Facebook</a>
+            <a href="http://www.google.com" class="iniciar_gg"> <img src="img\gg.png" alt="gg"> Continuar con Google</a>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>

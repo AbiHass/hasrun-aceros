@@ -1,0 +1,815 @@
+:root {
+    --grey: hsl(0deg 1% 7%);
+    --orange: #f3a008;
+    --font: system-ui;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
+
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    box-shadow: 0 0 3px 5px #1a1a1a;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--grey);    
+}
+.logo{
+    display: inline-block;
+    animation: pulse; 
+    animation-duration: 2s;
+}
+.logo_img:hover{
+    display: inline-block;
+    animation: pulse; 
+    animation-duration: 2s;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;    
+} 
+.navbar ul li a{
+    color: var(--orange);
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: bold;
+}
+.navbar i{
+    font-size: 35px;
+    display: none;
+    color: white;
+}
+li:hover{
+    display: inline-block;
+    animation: heartBeat; 
+    animation-duration: 2s;     
+}
+#toggle-menu{
+    display: none;
+}
+main {
+    background-image: url(img/fotoHero.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top: 2px;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+#hero{
+    max-width: 636px;
+    margin-top: 80px;
+}
+#about{
+    max-width: 1284px;
+}
+.hero_container h1 {
+    color: white;
+    font-size: 45px;
+    font-family: system-ui;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 800;
+}
+
+.hero_container span {
+    color: var(--orange);
+}
+
+.about_container p {
+    color: white;
+    font-family: system-ui;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 191px;
+    font-weight: bold;
+}
+
+.title_cards {
+    display: flex;
+    justify-content: center;
+    background-color: var(--orange);
+    padding: 15px;
+    margin-top: 5px;
+    font-family: var(--font);
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#section_cards {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    text-align: center;
+    background-color: var(--orange);
+    padding: 0 100px 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    font-family: var(--font);
+    width: 350px;
+    height: 550px;
+    box-shadow:3px 2px 4px 4px #000000d1;
+}
+
+.img-card {
+    width: 100%;
+    height: 380px;
+}
+
+.card h1 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.card p {
+    padding: 20px;
+}
+
+/* -------------------PRODUCTOS---------------------- */
+
+.title_products {
+    color: var(--orange);
+    font-family: var(--font);
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+#products {
+    display: grid;
+    /* grid-template-columns: 40fr 45fr 15fr; */
+    gap: 10px;
+    height: 600px;
+    max-width: 1400px;
+    padding: 0 50px 30px;
+    background-color: black;
+}
+
+.product_container {
+    border-radius: 5px;
+}
+
+.product_container:nth-child(1) {
+    grid-area: 1/1/3/2;
+    background: url(img/Pfermentador.jpg) no-repeat center/cover;
+}
+
+.product_container:nth-child(2) {
+    grid-area: 1/2/2/4;
+    background: url(img/Penlatadora.jpg) no-repeat center/cover;
+}
+
+.product_container:nth-child(3) {
+    grid-area: 1/4/2/5;
+    background: url(img/Paccesorio.jpg) no-repeat center/cover;
+}
+
+.product_container:nth-child(4) {
+    grid-area: 2/2/4/3;
+    background: url(img/Pbloquedecoccion.jpg) no-repeat center/cover;
+}
+
+.product_container:nth-child(5) {
+    grid-area: 2/3/4/4;
+    background: url(img/Pdestilador.jpg) no-repeat center/cover;
+}
+
+.product_container:nth-child(6) {
+    grid-area: 2/4/4/5;
+    background: url(img/PsistCip.jpg) no-repeat center/cover;
+    background-position: center;
+}
+
+.product_container:nth-child(7) {
+    grid-area: 3/1/4/2;
+    background: url(img/Pfermentador20HL.jpg) no-repeat center/cover;
+}
+
+.button_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 300%);
+    font-family: var(--font);
+    color: white;
+    font-size: 23px;
+    font-weight: 500;
+}
+.button_product:hover{
+    color: var(--orange);
+    transition: 0.5s ease;
+}
+
+/* -----------------PRESUPUESTO--------------------------------------- */
+
+.presupuesto_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-family: var(--font);
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.button_contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: var(--font);
+    color: white;
+    background-color: black;
+    margin: 0 500px;
+    height: 45px;
+    width: 260px;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.button_contacto:hover{
+    display: inline-block;
+    animation: pulse;
+    animation-duration: 2s;
+   
+}
+
+#presupuesto {
+    background-color: var(--orange);
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* ------------------------CLIENTES------------------------------------------ */
+
+#clientes {
+    background-color: black;
+}
+
+.title_clientes {
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 5px;
+    font-family: var(--font);
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+.clientes_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.logo_clientes{
+    width: 261px;
+}
+
+/* ------------------------FOOTER------------------------------------------ */
+footer {
+    background-color: black;
+}
+
+.icon {
+    height: 60px;
+}
+
+.redes_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.legales {
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.legales span {
+    color: white;
+    margin: 10px;
+}
+
+/* --------------------------INGRESO------------------------------ */
+
+#ingreso {
+    color: white;
+    background: url(img/ingreso_backg.jpg);
+    background-size: cover;
+    height: 577px;
+    margin-top: 80px;
+}
+
+.ingreso_title {
+    color: var(--orange);
+    font-family: var(--font);
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 15px 0;
+}
+
+.contacto_container h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.contacto_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: var(--font);
+    font-size: 20px; 
+}
+.contacto_container input{
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+}
+.contacto_opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: var(--font);
+    font-size: 17px;
+    color: white;
+    padding: 15px 0;
+    gap: 198px;    
+}
+.contacto_opciones a{
+    color: white;
+    text-decoration: underline;
+}
+.iniciar_sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px 0 15px;
+}
+.iniciar_sesion input{
+    width: 450px;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font);
+    font-size: 16px;
+}
+.iniciar_sesion input:hover{
+    display: inline-block;
+    animation: pulse;
+    animation-duration: 2s;
+}
+
+.iniciar_redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px; 
+    font-family: var(--font);
+    padding: 15px 0;
+}
+.iniciar_fb{
+    background-color: black;
+    color: white;
+    padding: 3px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    border-radius: 5px;  
+}
+.iniciar_fb img{
+    width: 35px;
+}
+.iniciar_gg{
+    background-color: black;
+    color: white;
+    padding: 3px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    border-radius: 5px;  
+}
+.iniciar_gg img{
+    width: 35px;    
+}
+.registro_container a{
+    color: white;
+    font-size: 23px;
+}
+/* ----------------------------REGISTRO----------------------------- */
+
+#registro {
+    color: white;
+    background: url(img/backgRegistro.jpg);
+    background-size: cover;
+    height: 577px;   
+    margin-top: 80px;
+}
+.registro_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-family: var(--font);
+    font-size: 19px; 
+    gap: 25px;
+    padding: 15px 0;
+}
+.registro_container input{
+    width: 280px;
+    height: 30px; 
+    border-radius: 5px;  
+}
+#email{
+    width: 585px;
+}
+
+#registro h1{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: var(--font);
+    color: var(--orange);
+}
+.button_crear{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+.button_crear input{
+    width: 585px;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font);
+    font-size: 19px;
+}
+.button_crear input:hover{
+    display: inline-block;
+    animation: pulse;
+    animation-duration: 2s;
+}
+.terminos{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: var(--font);
+    gap: 5px;
+}
+.terminos a{
+    color: var(--orange);
+    text-decoration: underline;
+}
+/* -------------------MEDIA QUERIS----------------------------- */
+
+@media (max-width: 1155px){
+    .about_container p{
+       margin: 20px 150px;
+    }
+}
+@media (max-width: 1050px){
+    .about_container p{
+        margin: 20px 120px;
+    }
+    #products{
+        padding: 0 10px 30px;
+    }
+    .button_product{
+        font-size: 20px;
+    }
+    .navbar ul {
+        gap: 25px;
+    }
+}
+@media (max-width: 992px){
+    .hero_container h1{
+        font-size: 35px;
+    }
+    .about_container p{
+        font-size: 17px;
+    }
+    .navbar ul li a{
+        font-size: 14px;
+    }
+    main{
+        height: 400px;
+    }
+    .title_cards{
+        font-size: 15px;
+    }
+    .title_products{
+        font-size: 15px;
+    }
+    .presupuesto_container h1{
+        font-size: 17px;
+    }
+    .button_contacto{
+        font-size: 18px;
+        width: 230px;
+        height: 40px;
+    }
+    #presupuesto{
+        padding: 15px;
+        margin: 20px;
+    }
+    .title_clientes{
+        font-size: 15px;
+    }
+    .logo_clientes{
+        width: 300px;
+    }
+    .icon{
+        height: 50px;
+    }
+    #products{
+        padding: 0 10px 30px;
+        height: 570px;
+    }
+    .button_product{
+        font-size: 20px;
+    }
+    .navbar ul {
+        gap: 25px;
+    }
+    .logo_clientes{
+        width: 244px;
+    }
+    .ingreso_title{
+    font-size: 25px;
+    }
+    .contacto_container h1 {
+        font-size: 22px;
+    }
+    .contacto_container input {
+        width: 420px;
+        height: 27px;
+    }
+    .contacto_opciones{
+        gap: 171px;
+    }
+    .iniciar_sesion input {
+        width: 420px;
+        height: 27px;
+    }
+    .registro_container{
+        font-size: 16px;
+    }
+    .iniciar_fb img {
+        width: 30px;
+    }
+    .iniciar_gg img {
+        width: 30px;
+    }
+    #registro h1{
+        font-size: 25px;
+    }
+    .button_crear input {
+        font-size: 17px;
+    }
+    .terminos{
+        font-size: 14px;
+    }
+}
+@media(max-width: 768px){
+   .navbar ul{
+    background-color:  #000000f0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top:80px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translatex(200%);
+    transition: all 0.4s ease-out;
+    gap: 50px;
+   }
+   .navbar i{
+    display: block;
+   }
+   #toggle-menu:checked ~ .navbar-list{
+    transform: translatex(0%); 
+    transition:all 0.4s ease-in;
+   }
+   .navbar ul li a{
+    font-size: 20px;
+   }
+   .header{
+    justify-content: space-between;
+    padding: 0 30px;
+   }
+}
+@media (max-width: 576px){
+    .header img{
+        width: 175px;
+    }
+    .navbar i{
+        font-size: 30px;
+    }
+    .navbar ul li a{
+        font-size: 17px;
+    }
+    .hero_container h1 {
+        font-size: 30px;
+    }
+    .about_container p {
+        font-size: 15px;
+        margin: 20px;
+    }
+    #main {
+        height: 350px;
+    }
+    .title_cards {
+        font-size: 12px;
+    }
+    #section_cards{
+        gap: 5px;
+        padding: 10px 0;
+    }
+    .card{
+        width: 380px;
+    }
+    .card h1{
+        font-size: 18px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+    .title_products {
+        font-size: 12px;
+    }
+    #products {
+        padding: 0 5px 20px;
+        height: 530px;
+    }
+    #presupuesto {
+        padding: 5px;
+        margin: 10px;
+    }
+    .presupuesto_container h1 {
+        font-size: 16px;
+    }
+    .button_contacto {
+        font-size: 16px;
+        width: 215px;
+        height: 35px;
+    }
+    .title_clientes {
+        font-size: 12px;
+    }
+    .logo_clientes {
+        width: 220px;
+    }
+    .icon {
+        height: 45px;
+    }
+    .legales{
+        font-size: 13px;
+    }
+    .ingreso_title{
+        font-size: 25px;
+    }
+    .contacto_container h1{
+        font-size: 20px;
+    }
+    .contacto_container input {
+        width: 400px;
+    }
+    .contacto_container p{
+        font-size: 16px;
+    }
+    .contacto_opciones {
+        gap: 165px;
+        font-size: 16px;
+    }
+    .iniciar_sesion input{
+        width: 400px;
+    }
+    .registro_container {
+        font-size: 14px;
+    }
+    .iniciar_fb img {
+        width: 25px;
+    }
+    .iniciar_gg img {
+        width: 25px;
+    }
+    #ingreso{
+        height: 490px;
+    }
+    #registro h1 {
+        font-size: 22px;
+    }
+    .registro_container input {
+        width: 240px;
+        height: 26px;
+    }
+    #email {
+        width: 505px;
+    }
+    .button_crear input {
+        width: 505px;
+    }
+    .terminos {
+        font-size: 12px;
+    }
+
+
+}
+
+
